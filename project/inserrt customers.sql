@@ -1,0 +1,1 @@
+insert into customers (firstname, secondname) values ('Sergey', 'Sergeev'), ('Ivan', 'Ivanov'), ('Petr', 'Petrov');
