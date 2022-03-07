@@ -85,8 +85,8 @@ namespace WebApplication1.Controllers
         {
             string query = @"
                 update objects
-                set name = @DepartmentName
-                where id=@DepartmentId 
+                set name = @name
+                where id=@id 
             ";
 
             DataTable table = new DataTable();
@@ -97,8 +97,8 @@ namespace WebApplication1.Controllers
                 myCon.Open();
                 using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
                 {
-                    myCommand.Parameters.AddWithValue("@DepartmentId", dep.id);
-                    myCommand.Parameters.AddWithValue("@DepartmentName", dep.name);
+                    myCommand.Parameters.AddWithValue("@id", dep.id);
+                    myCommand.Parameters.AddWithValue("@name", dep.name);
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
 

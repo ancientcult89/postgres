@@ -10,7 +10,6 @@ namespace WebApplication1.Models
         public int id { get; set; }
         public float maxpower {get; set; }
         public int customer { get; set; }
-
         public int obj { get; set; }
 
     }
